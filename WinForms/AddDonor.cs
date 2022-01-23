@@ -47,21 +47,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            var homeForm = new DashboardForm();
-            homeForm.Show();
-            Hide();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            var viewDonorForm = new ViewDonor();
-            viewDonorForm.Show();
-            Hide();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void AddDonor_Load(object sender, EventArgs e)
         {
 
         }

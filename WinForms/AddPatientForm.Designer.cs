@@ -287,6 +287,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddPatientForm";
             this.Text = "Add Patient - Blood Donation Society Digital System";
+            this.Load += new System.EventHandler(this.AddPatientForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

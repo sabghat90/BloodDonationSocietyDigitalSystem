@@ -17,6 +17,11 @@ namespace BloodDonationSocietyDigitalSystem
             InitializeComponent();
         }
 
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             var signUpForm = new SignUpForm();

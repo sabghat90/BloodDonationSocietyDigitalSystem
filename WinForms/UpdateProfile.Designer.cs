@@ -40,6 +40,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateProfile";
             this.Text = "AddPatientForm";
+            this.Load += new System.EventHandler(this.UpdateProfile_Load);
             this.ResumeLayout(false);
 
         }

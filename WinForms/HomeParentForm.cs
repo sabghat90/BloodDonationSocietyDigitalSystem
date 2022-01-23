@@ -15,6 +15,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void LoadFormsToPanel(object Form)
         {
+            
             if (this.ContainerPanel.Controls.Count > 0)
                 this.ContainerPanel.Controls.RemoveAt(0);
             ContainerPanel.Controls.Clear();
@@ -74,6 +75,11 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         {
             BtnActivationLblPosition(btnDashboard);
             LoadFormsToPanel(new DashboardForm());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

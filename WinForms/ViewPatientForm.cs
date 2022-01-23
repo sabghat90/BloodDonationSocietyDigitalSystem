@@ -8,5 +8,10 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         {
             InitializeComponent();
         }
+
+        private void ViewPatientForm_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

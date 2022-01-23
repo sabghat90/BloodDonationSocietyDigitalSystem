@@ -289,6 +289,7 @@
             this.Name = "AddDonor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Donor - Blood Donation Society Digital System";
+            this.Load += new System.EventHandler(this.AddDonor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

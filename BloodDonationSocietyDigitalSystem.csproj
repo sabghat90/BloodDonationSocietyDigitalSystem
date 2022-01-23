@@ -198,9 +198,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="BDSDS_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -209,6 +207,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BDSDS_db.mdf</DependentUpon>
     </Content>
+    <Content Include="img\cancel %281%29.png" />
+    <Content Include="img\cancel.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

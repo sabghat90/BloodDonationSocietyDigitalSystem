@@ -50,20 +50,6 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             FillData();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            var addDonorForm = new AddDonor();
-            addDonorForm.Show();
-            Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            var homeForm = new DashboardForm();
-            homeForm.Show();
-            Hide();
-        }
-
         private void txbxSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
@@ -97,6 +83,11 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                         conn.Close();
                 }
             }
+        }
+
+        private void ViewDonor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

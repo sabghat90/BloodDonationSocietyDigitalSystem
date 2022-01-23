@@ -40,6 +40,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewPatientForm";
             this.Text = "ViewPatientForm";
+            this.Load += new System.EventHandler(this.ViewPatientForm_Load);
             this.ResumeLayout(false);
 
         }
