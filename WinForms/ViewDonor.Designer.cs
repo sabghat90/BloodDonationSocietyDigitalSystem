@@ -63,11 +63,11 @@
             this.datagridDonor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.datagridDonor.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.datagridDonor.HeaderForeColor = System.Drawing.Color.White;
-            this.datagridDonor.Location = new System.Drawing.Point(202, 91);
+            this.datagridDonor.Location = new System.Drawing.Point(0, 80);
             this.datagridDonor.Name = "datagridDonor";
             this.datagridDonor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datagridDonor.ShowEditingIcon = false;
-            this.datagridDonor.Size = new System.Drawing.Size(590, 325);
+            this.datagridDonor.Size = new System.Drawing.Size(763, 325);
             this.datagridDonor.TabIndex = 3;
             // 
             // btnRefresh
@@ -88,7 +88,7 @@
             this.btnRefresh.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnRefresh.IdleForecolor = System.Drawing.Color.White;
             this.btnRefresh.IdleLineColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(606, 408);
+            this.btnRefresh.Location = new System.Drawing.Point(596, 424);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(5);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(122, 42);
