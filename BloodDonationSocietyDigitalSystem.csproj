@@ -81,36 +81,36 @@
     <Compile Include="WinForms\AddPatientForm.Designer.cs">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\DbAccess.cs" />
     <Compile Include="WinForms\HomeParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WinForms\HomeParentForm.Designer.cs">
       <DependentUpon>HomeParentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\UpdateProfile.cs">
+    <Compile Include="WinForms\UpdateProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\UpdateProfile.Designer.cs">
-      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    <Compile Include="WinForms\UpdateProfileForm.Designer.cs">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\UserInputValidating.cs" />
     <Compile Include="WinForms\ViewPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WinForms\ViewPatientForm.Designer.cs">
       <DependentUpon>ViewPatientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\ViewDonor.cs">
+    <Compile Include="WinForms\ViewDonorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\ViewDonor.Designer.cs">
-      <DependentUpon>ViewDonor.cs</DependentUpon>
+    <Compile Include="WinForms\ViewDonorForm.Designer.cs">
+      <DependentUpon>ViewDonorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\AddDonor.cs">
+    <Compile Include="WinForms\AddDonorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\AddDonor.Designer.cs">
-      <DependentUpon>AddDonor.cs</DependentUpon>
+    <Compile Include="WinForms\AddDonorForm.Designer.cs">
+      <DependentUpon>AddDonorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BDSDS_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -143,14 +143,14 @@
     <EmbeddedResource Include="WinForms\HomeParentForm.resx">
       <DependentUpon>HomeParentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\UpdateProfile.resx">
-      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\UpdateProfileForm.resx">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\ViewDonor.resx">
-      <DependentUpon>ViewDonor.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\ViewDonorForm.resx">
+      <DependentUpon>ViewDonorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\AddDonor.resx">
-      <DependentUpon>AddDonor.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\AddDonorForm.resx">
+      <DependentUpon>AddDonorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace BloodDonationSocietyDigitalSystem.WinForms
 {
-    partial class UpdateProfile
+    partial class UpdateProfileForm
     {
         /// <summary>
         /// Required designer variable.

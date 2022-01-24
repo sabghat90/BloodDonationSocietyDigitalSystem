@@ -35,7 +35,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblUserName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblUserName.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
@@ -46,7 +46,7 @@
             this.lblUserName.Text = "User Name";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // HomeForm
+            // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -56,7 +56,7 @@
             this.Controls.Add(this.lblUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "HomeForm";
+            this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home - Blood Donation Society Digital System";
             this.Load += new System.EventHandler(this.HomeForm_Load);

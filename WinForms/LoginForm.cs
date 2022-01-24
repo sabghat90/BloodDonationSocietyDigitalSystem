@@ -24,9 +24,9 @@ namespace BloodDonationSocietyDigitalSystem
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            var signUpForm = new SignUpForm();
-            signUpForm.Show();
-            Hide();
+            SignUpForm singSignUpForm = new SignUpForm();
+            this.Hide();
+            singSignUpForm.Show();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

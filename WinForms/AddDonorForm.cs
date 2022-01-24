@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace BloodDonationSocietyDigitalSystem.WinForms
 {
-    public partial class AddDonor : Form
+    public partial class AddDonorForm : Form
     {
-        public AddDonor()
+        public AddDonorForm()
         {
             InitializeComponent();
         }
@@ -50,6 +50,23 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         private void AddDonor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbDGender_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
+        }
+
+        private void cbDBloodGroup_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!(cbDBloodGroup.Text.Equals("A+") || cbDBloodGroup.Text.Equals("A-") || cbDBloodGroup.Text.Trim().Equals("B+") || cbDBloodGroup.Text.Equals("B-") || cbDBloodGroup.Text.Equals("AB+") || cbDBloodGroup.Text.Equals("AB-") || cbDBloodGroup.Text.Equals("O+") || cbDBloodGroup.Text.Equals("O-")))
+            {
+                lblBloodGroup.Text = "Invalid";
+            }
+            else
+            {
+                lblBloodGroup.Text = "";
+            }
         }
     }
 }

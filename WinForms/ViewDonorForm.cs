@@ -5,26 +5,11 @@ using System.Windows.Forms;
 
 namespace BloodDonationSocietyDigitalSystem.WinForms
 {
-    public partial class ViewPatientForm : Form
+    public partial class ViewDonorForm : Form
     {
-        public ViewPatientForm()
+        public ViewDonorForm()
         {
             InitializeComponent();
-        }
-
-        private void ViewPatientForm_Load(object sender, System.EventArgs e)
-        {
-            const string query =
-                "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb";
-            FillData(query);
-        }
-
-        private void txbxSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            var query =
-                "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb where dBloodGroup = '" +
-                txbxSearch.Text + "' or dName = '" + txbxSearch.Text + "'";
-            FillData(query);
         }
 
         private void FillData(string query)
@@ -42,7 +27,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 var ds = new DataSet();
                 adapter.Fill(ds, "DonorTb");
 
-                datagriPatient.DataSource = ds.Tables["DonorTb"];
+                datagridDonor.DataSource = ds.Tables["DonorTb"];
             }
             catch (Exception ex)
             {
@@ -54,6 +39,24 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 if (conn.State == ConnectionState.Open)
                     conn.Close();
             }
+        }
+
+        private void txbxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                var query =
+                    "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb where dBloodGroup = '" +
+                    txbxSearch.Text + "' or dName = '" + txbxSearch.Text + "'";
+                FillData(query);
+            }
+        }
+
+        private void ViewDonor_Load(object sender, EventArgs e)
+        {
+            const string query =
+                "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb";
+            FillData(query);
         }
     }
 }

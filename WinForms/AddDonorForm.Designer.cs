@@ -1,6 +1,6 @@
 ﻿namespace BloodDonationSocietyDigitalSystem.WinForms
 {
-    partial class AddDonor
+    partial class AddDonorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDonor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDonorForm));
             this.txbxDName = new System.Windows.Forms.TextBox();
             this.txbxDAge = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.rtxbxDAddress = new System.Windows.Forms.RichTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.btnAddDonor = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lblBloodGroup = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbxDName
@@ -53,7 +54,7 @@
             this.txbxDName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbxDName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxDName.ForeColor = System.Drawing.Color.White;
-            this.txbxDName.Location = new System.Drawing.Point(323, 126);
+            this.txbxDName.Location = new System.Drawing.Point(162, 110);
             this.txbxDName.Name = "txbxDName";
             this.txbxDName.Size = new System.Drawing.Size(242, 26);
             this.txbxDName.TabIndex = 0;
@@ -63,9 +64,9 @@
             this.txbxDAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbxDAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxDAge.ForeColor = System.Drawing.Color.White;
-            this.txbxDAge.Location = new System.Drawing.Point(640, 126);
+            this.txbxDAge.Location = new System.Drawing.Point(525, 110);
             this.txbxDAge.Name = "txbxDAge";
-            this.txbxDAge.Size = new System.Drawing.Size(71, 26);
+            this.txbxDAge.Size = new System.Drawing.Size(162, 26);
             this.txbxDAge.TabIndex = 1;
             // 
             // label8
@@ -73,7 +74,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label8.Location = new System.Drawing.Point(580, 129);
+            this.label8.Location = new System.Drawing.Point(439, 113);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 20);
             this.label8.TabIndex = 50;
@@ -84,18 +85,18 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label10.Location = new System.Drawing.Point(245, 126);
+            this.label10.Location = new System.Drawing.Point(26, 113);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
+            this.label10.Size = new System.Drawing.Size(98, 20);
             this.label10.TabIndex = 48;
-            this.label10.Text = "Name";
+            this.label10.Text = "Your Name";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label11.Location = new System.Drawing.Point(244, 74);
+            this.label11.Location = new System.Drawing.Point(26, 65);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(175, 16);
             this.label11.TabIndex = 47;
@@ -106,7 +107,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label12.Location = new System.Drawing.Point(243, 31);
+            this.label12.Location = new System.Drawing.Point(26, 20);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 25);
             this.label12.TabIndex = 46;
@@ -117,7 +118,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label7.Location = new System.Drawing.Point(245, 178);
+            this.label7.Location = new System.Drawing.Point(439, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 20);
             this.label7.TabIndex = 51;
@@ -133,17 +134,18 @@
             "Male",
             "Female",
             "Custom"});
-            this.cbDGender.Location = new System.Drawing.Point(323, 176);
+            this.cbDGender.Location = new System.Drawing.Point(525, 175);
             this.cbDGender.Name = "cbDGender";
-            this.cbDGender.Size = new System.Drawing.Size(113, 26);
+            this.cbDGender.Size = new System.Drawing.Size(162, 26);
             this.cbDGender.TabIndex = 2;
+            this.cbDGender.Validating += new System.ComponentModel.CancelEventHandler(this.cbDGender_Validating);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label9.Location = new System.Drawing.Point(453, 178);
+            this.label9.Location = new System.Drawing.Point(26, 181);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 20);
             this.label9.TabIndex = 53;
@@ -154,9 +156,9 @@
             this.txbxDCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbxDCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxDCity.ForeColor = System.Drawing.Color.White;
-            this.txbxDCity.Location = new System.Drawing.Point(498, 178);
+            this.txbxDCity.Location = new System.Drawing.Point(162, 175);
             this.txbxDCity.Name = "txbxDCity";
-            this.txbxDCity.Size = new System.Drawing.Size(213, 26);
+            this.txbxDCity.Size = new System.Drawing.Size(242, 26);
             this.txbxDCity.TabIndex = 3;
             // 
             // txbxDPhone
@@ -164,9 +166,9 @@
             this.txbxDPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbxDPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbxDPhone.ForeColor = System.Drawing.Color.White;
-            this.txbxDPhone.Location = new System.Drawing.Point(323, 233);
+            this.txbxDPhone.Location = new System.Drawing.Point(162, 239);
             this.txbxDPhone.Name = "txbxDPhone";
-            this.txbxDPhone.Size = new System.Drawing.Size(223, 26);
+            this.txbxDPhone.Size = new System.Drawing.Size(242, 26);
             this.txbxDPhone.TabIndex = 4;
             // 
             // label13
@@ -174,7 +176,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label13.Location = new System.Drawing.Point(245, 233);
+            this.label13.Location = new System.Drawing.Point(26, 245);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 20);
             this.label13.TabIndex = 56;
@@ -185,7 +187,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label14.Location = new System.Drawing.Point(245, 282);
+            this.label14.Location = new System.Drawing.Point(439, 243);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(110, 20);
             this.label14.TabIndex = 57;
@@ -206,10 +208,11 @@
             "AB-",
             "O+",
             "O-"});
-            this.cbDBloodGroup.Location = new System.Drawing.Point(374, 280);
+            this.cbDBloodGroup.Location = new System.Drawing.Point(555, 239);
             this.cbDBloodGroup.Name = "cbDBloodGroup";
-            this.cbDBloodGroup.Size = new System.Drawing.Size(87, 26);
+            this.cbDBloodGroup.Size = new System.Drawing.Size(132, 26);
             this.cbDBloodGroup.TabIndex = 5;
+            this.cbDBloodGroup.Validating += new System.ComponentModel.CancelEventHandler(this.cbDBloodGroup_Validating);
             // 
             // rtxbxDAddress
             // 
@@ -217,7 +220,7 @@
             this.rtxbxDAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtxbxDAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtxbxDAddress.ForeColor = System.Drawing.SystemColors.Window;
-            this.rtxbxDAddress.Location = new System.Drawing.Point(326, 334);
+            this.rtxbxDAddress.Location = new System.Drawing.Point(162, 311);
             this.rtxbxDAddress.Name = "rtxbxDAddress";
             this.rtxbxDAddress.Size = new System.Drawing.Size(239, 93);
             this.rtxbxDAddress.TabIndex = 6;
@@ -228,7 +231,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label15.Location = new System.Drawing.Point(245, 332);
+            this.label15.Location = new System.Drawing.Point(26, 311);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(75, 20);
             this.label15.TabIndex = 60;
@@ -252,7 +255,7 @@
             this.btnAddDonor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnAddDonor.IdleForecolor = System.Drawing.Color.White;
             this.btnAddDonor.IdleLineColor = System.Drawing.Color.White;
-            this.btnAddDonor.Location = new System.Drawing.Point(589, 385);
+            this.btnAddDonor.Location = new System.Drawing.Point(565, 362);
             this.btnAddDonor.Margin = new System.Windows.Forms.Padding(5);
             this.btnAddDonor.Name = "btnAddDonor";
             this.btnAddDonor.Size = new System.Drawing.Size(122, 42);
@@ -260,13 +263,24 @@
             this.btnAddDonor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddDonor.Click += new System.EventHandler(this.btnAddDonor_Click);
             // 
-            // AddDonor
+            // lblBloodGroup
+            // 
+            this.lblBloodGroup.AutoSize = true;
+            this.lblBloodGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBloodGroup.ForeColor = System.Drawing.Color.White;
+            this.lblBloodGroup.Location = new System.Drawing.Point(562, 268);
+            this.lblBloodGroup.Name = "lblBloodGroup";
+            this.lblBloodGroup.Size = new System.Drawing.Size(0, 16);
+            this.lblBloodGroup.TabIndex = 79;
+            // 
+            // AddDonorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(742, 464);
             this.ControlBox = false;
+            this.Controls.Add(this.lblBloodGroup);
             this.Controls.Add(this.btnAddDonor);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.rtxbxDAddress);
@@ -286,7 +300,7 @@
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AddDonor";
+            this.Name = "AddDonorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Donor - Blood Donation Society Digital System";
             this.Load += new System.EventHandler(this.AddDonor_Load);
@@ -313,5 +327,6 @@
         private System.Windows.Forms.RichTextBox rtxbxDAddress;
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddDonor;
+        private System.Windows.Forms.Label lblBloodGroup;
     }
 }

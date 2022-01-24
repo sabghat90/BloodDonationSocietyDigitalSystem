@@ -25,7 +25,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             if (!Regex.Match(txbxName.Text, @"^[A-Za-z] + $").Success)
                 if (Regex.Match(txbxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
                     if (!Regex.Match(txbxPassword.Text,
-                            @"^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$").Success &&
+                            @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$").Success &&
                         txbxPassword.Text == txbxCPassword.Text)
                         isValidUser = true;
             return isValidUser;
@@ -127,16 +127,21 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         /// <param name="e"></param>
         private void txbxCPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (txbxPassword.Text.Equals(""))
+            if (txbxCPassword.Text.Equals(""))
                 lblPassword.Text = @"Password Should Not Be Empty";
             else if (txbxPassword.Text == txbxCPassword.Text)
                 lblPassword.Text = @"Password Not Matching";
-            else if (!Regex.Match(txbxPassword.Text,
-                         @"^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$").Success
+            else if (!Regex.Match(txbxCPassword.Text,
+                         @"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$").Success
                     )
                 lblPassword.Text = @"Invalid Password";
             else
                 lblPassword.Text = "";
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

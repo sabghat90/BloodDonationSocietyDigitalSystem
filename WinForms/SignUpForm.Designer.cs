@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.btnSignUp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnBackToLogin = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txbxName = new System.Windows.Forms.TextBox();
-            this.txbxEmail = new System.Windows.Forms.TextBox();
-            this.txbxPassword = new System.Windows.Forms.TextBox();
-            this.txbxCPassword = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txbxCPassword = new System.Windows.Forms.TextBox();
+            this.txbxPassword = new System.Windows.Forms.TextBox();
+            this.txbxEmail = new System.Windows.Forms.TextBox();
+            this.txbxName = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -98,102 +98,16 @@
             this.btnBackToLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
             // 
-            // lblName
+            // label3
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(289, 133);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 16);
-            this.lblName.TabIndex = 41;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(289, 325);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(0, 16);
-            this.lblPassword.TabIndex = 40;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(289, 197);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(0, 16);
-            this.lblEmail.TabIndex = 39;
-            // 
-            // txbxName
-            // 
-            this.txbxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.txbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxName.ForeColor = System.Drawing.Color.White;
-            this.txbxName.Location = new System.Drawing.Point(289, 104);
-            this.txbxName.Name = "txbxName";
-            this.txbxName.Size = new System.Drawing.Size(242, 26);
-            this.txbxName.TabIndex = 0;
-            this.txbxName.Validating += new System.ComponentModel.CancelEventHandler(this.txbxName_Validating);
-            // 
-            // txbxEmail
-            // 
-            this.txbxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.txbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxEmail.ForeColor = System.Drawing.Color.White;
-            this.txbxEmail.Location = new System.Drawing.Point(289, 168);
-            this.txbxEmail.Name = "txbxEmail";
-            this.txbxEmail.Size = new System.Drawing.Size(242, 26);
-            this.txbxEmail.TabIndex = 1;
-            this.txbxEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txbxEmail_Validating);
-            // 
-            // txbxPassword
-            // 
-            this.txbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.txbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxPassword.ForeColor = System.Drawing.Color.White;
-            this.txbxPassword.Location = new System.Drawing.Point(289, 232);
-            this.txbxPassword.Name = "txbxPassword";
-            this.txbxPassword.PasswordChar = '*';
-            this.txbxPassword.Size = new System.Drawing.Size(242, 26);
-            this.txbxPassword.TabIndex = 2;
-            // 
-            // txbxCPassword
-            // 
-            this.txbxCPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.txbxCPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxCPassword.ForeColor = System.Drawing.Color.White;
-            this.txbxCPassword.Location = new System.Drawing.Point(289, 296);
-            this.txbxCPassword.Name = "txbxCPassword";
-            this.txbxCPassword.PasswordChar = '*';
-            this.txbxCPassword.Size = new System.Drawing.Size(242, 26);
-            this.txbxCPassword.TabIndex = 3;
-            this.txbxCPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbxCPassword_Validating);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label7.Location = new System.Drawing.Point(74, 299);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(196, 20);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Confirm Your Password";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label6.Location = new System.Drawing.Point(74, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Email";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.label3.Location = new System.Drawing.Point(74, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Name";
             // 
             // label4
             // 
@@ -206,16 +120,103 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Password";
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label3.Location = new System.Drawing.Point(74, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Name";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.label6.Location = new System.Drawing.Point(74, 169);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Email";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.label7.Location = new System.Drawing.Point(74, 299);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(196, 20);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Confirm Your Password";
+            // 
+            // txbxCPassword
+            // 
+            this.txbxCPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txbxCPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxCPassword.ForeColor = System.Drawing.Color.White;
+            this.txbxCPassword.Location = new System.Drawing.Point(289, 296);
+            this.txbxCPassword.Name = "txbxCPassword";
+            this.txbxCPassword.PasswordChar = '*';
+            this.txbxCPassword.Size = new System.Drawing.Size(242, 26);
+            this.txbxCPassword.TabIndex = 3;
+            this.txbxCPassword.UseSystemPasswordChar = true;
+            this.txbxCPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txbxCPassword_Validating);
+            // 
+            // txbxPassword
+            // 
+            this.txbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxPassword.ForeColor = System.Drawing.Color.White;
+            this.txbxPassword.Location = new System.Drawing.Point(289, 232);
+            this.txbxPassword.Name = "txbxPassword";
+            this.txbxPassword.Size = new System.Drawing.Size(242, 26);
+            this.txbxPassword.TabIndex = 2;
+            this.txbxPassword.UseSystemPasswordChar = true;
+            // 
+            // txbxEmail
+            // 
+            this.txbxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxEmail.ForeColor = System.Drawing.Color.White;
+            this.txbxEmail.Location = new System.Drawing.Point(289, 168);
+            this.txbxEmail.Name = "txbxEmail";
+            this.txbxEmail.Size = new System.Drawing.Size(242, 26);
+            this.txbxEmail.TabIndex = 1;
+            this.txbxEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txbxEmail_Validating);
+            // 
+            // txbxName
+            // 
+            this.txbxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxName.ForeColor = System.Drawing.Color.White;
+            this.txbxName.Location = new System.Drawing.Point(289, 104);
+            this.txbxName.Name = "txbxName";
+            this.txbxName.Size = new System.Drawing.Size(242, 26);
+            this.txbxName.TabIndex = 0;
+            this.txbxName.Validating += new System.ComponentModel.CancelEventHandler(this.txbxName_Validating);
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(289, 197);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(0, 16);
+            this.lblEmail.TabIndex = 39;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(289, 325);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(0, 16);
+            this.lblPassword.TabIndex = 40;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(289, 133);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 16);
+            this.lblName.TabIndex = 41;
             // 
             // label2
             // 
@@ -275,17 +276,17 @@
 
         private Bunifu.Framework.UI.BunifuThinButton2 btnSignUp;
         private Bunifu.Framework.UI.BunifuThinButton2 btnBackToLogin;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txbxName;
-        private System.Windows.Forms.TextBox txbxEmail;
-        private System.Windows.Forms.TextBox txbxPassword;
-        private System.Windows.Forms.TextBox txbxCPassword;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txbxCPassword;
+        private System.Windows.Forms.TextBox txbxPassword;
+        private System.Windows.Forms.TextBox txbxEmail;
+        private System.Windows.Forms.TextBox txbxName;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

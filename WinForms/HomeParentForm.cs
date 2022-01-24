@@ -35,13 +35,13 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void btnAddDonor_Click(object sender, EventArgs e)
         {
-            LoadFormsToPanel(new AddDonor());
+            LoadFormsToPanel(new AddDonorForm());
             BtnActivationLblPosition(btnAddDonor);
         }
 
         private void btnViewDonor_Click(object sender, EventArgs e)
         {
-            LoadFormsToPanel(new ViewDonor());
+            LoadFormsToPanel(new ViewDonorForm());
             BtnActivationLblPosition(btnViewDonor);
         }
 
@@ -59,7 +59,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void btnUpdateProfile_Click(object sender, EventArgs e)
         {
-            LoadFormsToPanel(new UpdateProfile());
+            LoadFormsToPanel(new UpdateProfileForm());
             BtnActivationLblPosition(btnUpdateProfile);
         }
 

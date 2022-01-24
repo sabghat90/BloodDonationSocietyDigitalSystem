@@ -2,9 +2,9 @@
 
 namespace BloodDonationSocietyDigitalSystem.WinForms
 {
-    public partial class UpdateProfile : Form
+    public partial class UpdateProfileForm : Form
     {
-        public UpdateProfile()
+        public UpdateProfileForm()
         {
             InitializeComponent();
         }
