@@ -41,7 +41,7 @@
             this.cbDGender = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbxDPhone = new System.Windows.Forms.TextBox();
-            this.txbxDAge = new System.Windows.Forms.TextBox();
+            this.txbxPAge = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -102,6 +102,7 @@
             this.rtxbxDAddress.Size = new System.Drawing.Size(239, 93);
             this.rtxbxDAddress.TabIndex = 67;
             this.rtxbxDAddress.Text = "";
+            this.rtxbxDAddress.TextChanged += new System.EventHandler(this.rtxbxDAddress_TextChanged);
             // 
             // cbPBloodGroup
             // 
@@ -122,7 +123,6 @@
             this.cbPBloodGroup.Name = "cbPBloodGroup";
             this.cbPBloodGroup.Size = new System.Drawing.Size(160, 26);
             this.cbPBloodGroup.TabIndex = 66;
-            this.cbPBloodGroup.Validating += new System.ComponentModel.CancelEventHandler(this.cbDBloodGroup_Validating);
             // 
             // label14
             // 
@@ -155,7 +155,7 @@
             this.txbxPName.Name = "txbxPName";
             this.txbxPName.Size = new System.Drawing.Size(242, 26);
             this.txbxPName.TabIndex = 65;
-            this.txbxPName.Validating += new System.ComponentModel.CancelEventHandler(this.txbxDName_Validating);
+            this.txbxPName.TextChanged += new System.EventHandler(this.txbxPName_TextChanged);
             // 
             // txbxDCity
             // 
@@ -166,6 +166,7 @@
             this.txbxDCity.Name = "txbxDCity";
             this.txbxDCity.Size = new System.Drawing.Size(160, 26);
             this.txbxDCity.TabIndex = 64;
+            this.txbxDCity.TextChanged += new System.EventHandler(this.txbxDCity_TextChanged);
             // 
             // label9
             // 
@@ -213,16 +214,18 @@
             this.txbxDPhone.Name = "txbxDPhone";
             this.txbxDPhone.Size = new System.Drawing.Size(242, 26);
             this.txbxDPhone.TabIndex = 61;
+            this.txbxDPhone.TextChanged += new System.EventHandler(this.txbxDPhone_TextChanged);
             // 
-            // txbxDAge
+            // txbxPAge
             // 
-            this.txbxDAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.txbxDAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxDAge.ForeColor = System.Drawing.Color.White;
-            this.txbxDAge.Location = new System.Drawing.Point(558, 253);
-            this.txbxDAge.Name = "txbxDAge";
-            this.txbxDAge.Size = new System.Drawing.Size(160, 26);
-            this.txbxDAge.TabIndex = 62;
+            this.txbxPAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txbxPAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxPAge.ForeColor = System.Drawing.Color.White;
+            this.txbxPAge.Location = new System.Drawing.Point(558, 253);
+            this.txbxPAge.Name = "txbxPAge";
+            this.txbxPAge.Size = new System.Drawing.Size(160, 26);
+            this.txbxPAge.TabIndex = 62;
+            this.txbxPAge.TextChanged += new System.EventHandler(this.txbxPAge_TextChanged);
             // 
             // label8
             // 
@@ -273,7 +276,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(129, 172);
+            this.lblName.Location = new System.Drawing.Point(129, 170);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(0, 16);
             this.lblName.TabIndex = 78;
@@ -364,7 +367,7 @@
             this.Controls.Add(this.cbDGender);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbxDPhone);
-            this.Controls.Add(this.txbxDAge);
+            this.Controls.Add(this.txbxPAge);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -392,7 +395,7 @@
         private System.Windows.Forms.ComboBox cbDGender;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbxDPhone;
-        private System.Windows.Forms.TextBox txbxDAge;
+        private System.Windows.Forms.TextBox txbxPAge;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

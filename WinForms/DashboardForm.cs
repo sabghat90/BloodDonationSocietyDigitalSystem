@@ -12,7 +12,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            lblUserName.Text = @"Welcome " + LoginForm.name.ToUpper();
+            lblUserName.Text = @"Welcome " + LoginForm.name.ToUpper() + @"️ ❤️";
         }
     }
 }
