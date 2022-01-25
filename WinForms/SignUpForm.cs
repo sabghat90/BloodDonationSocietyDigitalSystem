@@ -9,6 +9,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 {
     public partial class SignUpForm : Form
     {
+        private DbAccessClass dbAccess = new DbAccessClass();
         public SignUpForm()
         {
             InitializeComponent();
@@ -45,7 +46,23 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@password", password);
 
-                InsertToDb(cmd);
+                int rowsEffected = dbAccess.executeQuery(cmd);
+
+                try
+                {
+                    if (rowsEffected == 1)
+                    {
+                        MessageBox.Show(@"Registration Successful, Go Back To Login", @"Confirmation", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        var frmLoginForm = new LoginForm();
+                        frmLoginForm.Show();
+                        Hide();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(@"Registration Failed" + ex.Message);
+                }
             }
         }
 

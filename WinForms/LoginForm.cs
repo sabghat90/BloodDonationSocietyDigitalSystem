@@ -10,7 +10,9 @@ namespace BloodDonationSocietyDigitalSystem
     {
         public static string id, name, email, password;
 
-        private readonly DataTable dt = new DataTable();
+        private readonly DataTable dataTable = new DataTable();
+
+        private readonly DbAccessClass dbAccess = new DbAccessClass();
 
         public LoginForm()
         {
@@ -36,7 +38,34 @@ namespace BloodDonationSocietyDigitalSystem
 
             var query = "Select * From userTb Where email = '" + email + "'and password = '" + password + "'";
 
-            ReadDataThroughAdapter(query, dt);
+            dbAccess.readDatathroughAdapter(query, dataTable);
+
+            try
+            {
+                // this is the global variables which we use further for the login user...
+
+                id = dataTable.Rows[0]["id"].ToString();
+                name = dataTable.Rows[0]["name"].ToString();
+                email = dataTable.Rows[0]["email"].ToString();
+                password = dataTable.Rows[0]["password"].ToString();
+
+
+                if (dataTable.Rows.Count == 1)
+                {
+                    Hide();
+                    var frm = new HomeParentForm();
+                    frm.Show();
+                }
+
+                else
+                {
+                    MessageBox.Show(@"Email or Password is incorrect...", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(@"Incorrect Password", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ReadDataThroughAdapter(string query, DataTable dataTable)
