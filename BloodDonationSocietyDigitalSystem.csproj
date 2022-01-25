@@ -81,6 +81,7 @@
     <Compile Include="WinForms\AddPatientForm.Designer.cs">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\DbAccessClass.cs" />
     <Compile Include="WinForms\HomeParentForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,7 +14,7 @@ namespace BloodDonationSocietyDigitalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddPatientForm());
+            Application.Run(new HomeParentForm());
         }
     }
 }

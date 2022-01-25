@@ -7,6 +7,9 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 {
     public partial class ViewPatientForm : Form
     {
+        DataTable dt = new DataTable();
+        private DbAccessClass dbAccess = new DbAccessClass();
+
         public ViewPatientForm()
         {
             InitializeComponent();
@@ -16,7 +19,8 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         {
             const string query =
                 "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb";
-            FillData(query);
+            dt = dbAccess.readDatathroughAdapter(query, dt);
+            datagriPatient.DataSource = dt;
         }
 
         private void txbxSearch_KeyPress(object sender, KeyPressEventArgs e)
@@ -24,7 +28,8 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             var query =
                 "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb where dBloodGroup = '" +
                 txbxSearch.Text + "' or dName = '" + txbxSearch.Text + "'";
-            FillData(query);
+            dt = dbAccess.readDatathroughAdapter(query, dt);
+            datagriPatient.DataSource = dt;
         }
 
         private void FillData(string query)
