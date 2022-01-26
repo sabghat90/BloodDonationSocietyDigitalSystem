@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPatientForm));
             this.datagridPatient = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txbxSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.patientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txbxSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagridPatient)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,41 +82,6 @@
             this.datagridPatient.Size = new System.Drawing.Size(702, 351);
             this.datagridPatient.TabIndex = 15;
             // 
-            // patientName
-            // 
-            this.patientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientName.HeaderText = "Name";
-            this.patientName.Name = "patientName";
-            this.patientName.ReadOnly = true;
-            // 
-            // patientAge
-            // 
-            this.patientAge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientAge.HeaderText = "Age";
-            this.patientAge.Name = "patientAge";
-            this.patientAge.ReadOnly = true;
-            // 
-            // patientGender
-            // 
-            this.patientGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientGender.HeaderText = "Gender";
-            this.patientGender.Name = "patientGender";
-            this.patientGender.ReadOnly = true;
-            // 
-            // patientPhone
-            // 
-            this.patientPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientPhone.HeaderText = "Phone";
-            this.patientPhone.Name = "patientPhone";
-            this.patientPhone.ReadOnly = true;
-            // 
-            // patientAddress
-            // 
-            this.patientAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.patientAddress.HeaderText = "Address";
-            this.patientAddress.Name = "patientAddress";
-            this.patientAddress.ReadOnly = true;
-            // 
             // txbxSearch
             // 
             this.txbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -146,6 +111,43 @@
             this.lblSearch.TabIndex = 13;
             this.lblSearch.Text = "Search";
             // 
+            // patientName
+            // 
+            this.patientName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.patientName.HeaderText = "Name";
+            this.patientName.Name = "patientName";
+            this.patientName.ReadOnly = true;
+            // 
+            // patientAge
+            // 
+            this.patientAge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.patientAge.HeaderText = "Age";
+            this.patientAge.Name = "patientAge";
+            this.patientAge.ReadOnly = true;
+            this.patientAge.Width = 5;
+            // 
+            // patientGender
+            // 
+            this.patientGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.patientGender.HeaderText = "Gender";
+            this.patientGender.Name = "patientGender";
+            this.patientGender.ReadOnly = true;
+            // 
+            // patientPhone
+            // 
+            this.patientPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.patientPhone.HeaderText = "Phone";
+            this.patientPhone.Name = "patientPhone";
+            this.patientPhone.ReadOnly = true;
+            // 
+            // patientAddress
+            // 
+            this.patientAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.patientAddress.HeaderText = "Address";
+            this.patientAddress.Name = "patientAddress";
+            this.patientAddress.ReadOnly = true;
+            this.patientAddress.Width = 5;
+            // 
             // ViewPatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,12 +173,12 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid datagridPatient;
+        private System.Windows.Forms.TextBox txbxSearch;
+        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientAge;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientGender;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientAddress;
-        private System.Windows.Forms.TextBox txbxSearch;
-        private System.Windows.Forms.Label lblSearch;
     }
 }

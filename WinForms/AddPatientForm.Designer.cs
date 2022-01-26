@@ -123,6 +123,7 @@
             this.cbPBloodGroup.Name = "cbPBloodGroup";
             this.cbPBloodGroup.Size = new System.Drawing.Size(160, 26);
             this.cbPBloodGroup.TabIndex = 66;
+            this.cbPBloodGroup.TextChanged += new System.EventHandler(this.cbPBloodGroup_TextChanged);
             // 
             // label14
             // 

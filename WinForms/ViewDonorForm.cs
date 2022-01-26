@@ -6,7 +6,6 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 {
     public partial class ViewDonorForm : Form
     {
-
         private readonly DbAccessClass dbAccess = new DbAccessClass();
         private SqlDataReader reader;
 
@@ -15,7 +14,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             InitializeComponent();
         }
 
-        private void ViewDonorForm_Load(object sender, System.EventArgs e)
+        private void ViewDonorForm_Load(object sender, EventArgs e)
         {
             const string query = "SELECT * FROM DonorTb";
 

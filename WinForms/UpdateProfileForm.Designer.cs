@@ -172,6 +172,7 @@
             this.rtxbxUpdateAddress.Size = new System.Drawing.Size(239, 93);
             this.rtxbxUpdateAddress.TabIndex = 91;
             this.rtxbxUpdateAddress.Text = "";
+            this.rtxbxUpdateAddress.TextChanged += new System.EventHandler(this.rtxbxUpdateAddress_TextChanged);
             // 
             // cbUpdateBloodGroup
             // 
@@ -192,6 +193,7 @@
             this.cbUpdateBloodGroup.Name = "cbUpdateBloodGroup";
             this.cbUpdateBloodGroup.Size = new System.Drawing.Size(160, 26);
             this.cbUpdateBloodGroup.TabIndex = 90;
+            this.cbUpdateBloodGroup.TextChanged += new System.EventHandler(this.cbUpdateBloodGroup_TextChanged);
             // 
             // label14
             // 
@@ -224,6 +226,7 @@
             this.txbxUpdateName.Name = "txbxUpdateName";
             this.txbxUpdateName.Size = new System.Drawing.Size(242, 26);
             this.txbxUpdateName.TabIndex = 89;
+            this.txbxUpdateName.TextChanged += new System.EventHandler(this.txbxUpdateName_TextChanged);
             // 
             // txbxUpdateCity
             // 
@@ -234,6 +237,7 @@
             this.txbxUpdateCity.Name = "txbxUpdateCity";
             this.txbxUpdateCity.Size = new System.Drawing.Size(160, 26);
             this.txbxUpdateCity.TabIndex = 88;
+            this.txbxUpdateCity.TextChanged += new System.EventHandler(this.txbxUpdateCity_TextChanged);
             // 
             // label9
             // 
@@ -260,6 +264,7 @@
             this.cbUpdateGender.Name = "cbUpdateGender";
             this.cbUpdateGender.Size = new System.Drawing.Size(242, 26);
             this.cbUpdateGender.TabIndex = 87;
+            this.cbUpdateGender.TextChanged += new System.EventHandler(this.cbUpdateGender_TextChanged);
             // 
             // label7
             // 
@@ -281,6 +286,7 @@
             this.txbxUpdatePhone.Name = "txbxUpdatePhone";
             this.txbxUpdatePhone.Size = new System.Drawing.Size(242, 26);
             this.txbxUpdatePhone.TabIndex = 85;
+            this.txbxUpdatePhone.TextChanged += new System.EventHandler(this.txbxUpdatePhone_TextChanged);
             // 
             // txbxUpdateAge
             // 
@@ -291,6 +297,7 @@
             this.txbxUpdateAge.Name = "txbxUpdateAge";
             this.txbxUpdateAge.Size = new System.Drawing.Size(160, 26);
             this.txbxUpdateAge.TabIndex = 86;
+            this.txbxUpdateAge.TextChanged += new System.EventHandler(this.txbxUpdateAge_TextChanged);
             // 
             // label8
             // 
@@ -342,6 +349,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(726, 425);
+            this.ControlBox = false;
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblPhone);
@@ -366,7 +374,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

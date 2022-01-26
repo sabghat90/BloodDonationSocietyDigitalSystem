@@ -44,5 +44,16 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             else
                 lblAddress.Text = "";
         }
+
+        private void cbPBloodGroup_TextChanged(object sender, EventArgs e)
+        {
+            if (!(cbPBloodGroup.Text.Equals("A+") || cbPBloodGroup.Text.Equals("A-") ||
+                  cbPBloodGroup.Text.Trim().Equals("B+") || cbPBloodGroup.Text.Equals("B-") ||
+                  cbPBloodGroup.Text.Equals("AB+") || cbPBloodGroup.Text.Equals("AB-") ||
+                  cbPBloodGroup.Text.Equals("O+") || cbPBloodGroup.Text.Equals("O-")))
+                lblBloodGroup.Text = "Invalid";
+            else
+                lblBloodGroup.Text = "";
+        }
     }
 }

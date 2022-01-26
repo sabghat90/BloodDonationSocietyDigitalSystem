@@ -146,6 +146,7 @@
             this.cbDGender.Name = "cbDGender";
             this.cbDGender.Size = new System.Drawing.Size(162, 26);
             this.cbDGender.TabIndex = 2;
+            this.cbDGender.TextChanged += new System.EventHandler(this.cbDGender_TextChanged);
             // 
             // label9
             // 

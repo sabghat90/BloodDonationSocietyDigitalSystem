@@ -141,10 +141,11 @@
             // 
             // donorAddress
             // 
-            this.donorAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donorAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             this.donorAddress.HeaderText = "Address";
             this.donorAddress.Name = "donorAddress";
             this.donorAddress.ReadOnly = true;
+            this.donorAddress.Width = 5;
             // 
             // ViewDonorForm
             // 

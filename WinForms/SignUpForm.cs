@@ -77,17 +77,18 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void txbxName_TextChanged(object sender, EventArgs e)
         {
-            UserInputValidating.ValidateUser(@"^[A-Za-z - ]+$",txbxName,lblName,"Name");
+            UserInputValidating.ValidateUser(@"^[A-Za-z - ]+$", txbxName, lblName, "Name");
         }
 
         private void txbxEmail_TextChanged(object sender, EventArgs e)
         {
-            UserInputValidating.ValidateUser(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$",txbxEmail,lblEmail,"Email");
+            UserInputValidating.ValidateUser(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", txbxEmail, lblEmail, "Email");
         }
 
         private void txbxPassword_TextChanged(object sender, EventArgs e)
         {
-            UserInputValidating.ValidateUser(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$",txbxPassword,lblPassword,"Password");
+            UserInputValidating.ValidateUser(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$",
+                txbxPassword, lblPassword, "Password");
         }
 
         private void txbxCPassword_TextChanged(object sender, EventArgs e)

@@ -81,5 +81,15 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             else
                 lblAddress.Text = "";
         }
+
+        private void cbDGender_TextChanged(object sender, EventArgs e)
+        {
+            if (cbDGender.Text.Equals(""))
+                lblGender.Text = "Empty Field";
+            else if (!(cbDGender.Text == "Male" || cbDGender.Text == "Female" || cbDGender.Text == "Custom"))
+                lblGender.Text = "Invalid Gender";
+            else
+                lblGender.Text = "";
+        }
     }
 }
