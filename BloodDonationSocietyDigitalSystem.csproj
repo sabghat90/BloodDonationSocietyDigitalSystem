@@ -75,6 +75,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDSDS_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSDS_dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\AddPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +98,12 @@
     <Compile Include="WinForms\HomeParentForm.Designer.cs">
       <DependentUpon>HomeParentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\UpdateProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +111,26 @@
       <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForms\UserInputValidating.cs" />
+    <Compile Include="WinForms\AddDonorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\AddDonorForm.Designer.cs">
+      <DependentUpon>AddDonorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinForms\ViewPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,81 +143,47 @@
     <Compile Include="WinForms\ViewDonorForm.Designer.cs">
       <DependentUpon>ViewDonorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\AddDonorForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\AddDonorForm.Designer.cs">
-      <DependentUpon>AddDonorForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BDSDS_dbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDSDS_dbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\DashboardForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\DashboardForm.Designer.cs">
-      <DependentUpon>DashboardForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\SignUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\SignUpForm.Designer.cs">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="WinForms\AddPatientForm.resx">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\HomeParentForm.resx">
       <DependentUpon>HomeParentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\UpdateProfileForm.resx">
-      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\ViewDonorForm.resx">
-      <DependentUpon>ViewDonorForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="WinForms\AddDonorForm.resx">
       <DependentUpon>AddDonorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="WinForms\SignUpForm.resx">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\UpdateProfileForm.resx">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForms\ViewPatientForm.resx">
       <DependentUpon>ViewPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\ViewDonorForm.resx">
+      <DependentUpon>ViewDonorForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BDSDS_dbDataSet.xsc">
       <DependentUpon>BDSDS_dbDataSet.xsd</DependentUpon>
     </None>
     <None Include="BDSDS_dbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDSDS_dbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>BDSDS_dbDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="BDSDS_dbDataSet.xss">
       <DependentUpon>BDSDS_dbDataSet.xsd</DependentUpon>

@@ -31,26 +31,61 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDonorForm));
-            this.datagridDonor = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnRefresh = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txbxSearch = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.datagridDonor = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.donorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donorAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donorGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donorPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donorAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datagridDonor)).BeginInit();
             this.SuspendLayout();
             // 
+            // txbxSearch
+            // 
+            this.txbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbxSearch.ForeColor = System.Drawing.Color.White;
+            this.txbxSearch.Location = new System.Drawing.Point(322, 12);
+            this.txbxSearch.Name = "txbxSearch";
+            this.txbxSearch.Size = new System.Drawing.Size(242, 26);
+            this.txbxSearch.TabIndex = 11;
+            this.txbxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbxSearch_KeyPress);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.Color.Transparent;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
+            this.lblSearch.Location = new System.Drawing.Point(153, 12);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(86, 25);
+            this.lblSearch.TabIndex = 10;
+            this.lblSearch.Text = "Search";
+            // 
             // datagridDonor
             // 
+            this.datagridDonor.AllowUserToAddRows = false;
+            this.datagridDonor.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.datagridDonor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.datagridDonor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagridDonor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.datagridDonor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.datagridDonor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.datagridDonor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagridDonor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.datagridDonor.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.datagridDonor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.datagridDonor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -58,84 +93,75 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagridDonor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.datagridDonor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridDonor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.donorName,
+            this.donorAge,
+            this.donorGender,
+            this.donorPhone,
+            this.donorAddress});
             this.datagridDonor.DoubleBuffered = true;
             this.datagridDonor.EnableHeadersVisualStyles = false;
-            this.datagridDonor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.datagridDonor.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.datagridDonor.GridColor = System.Drawing.SystemColors.WindowFrame;
+            this.datagridDonor.HeaderBgColor = System.Drawing.Color.Gray;
             this.datagridDonor.HeaderForeColor = System.Drawing.Color.White;
-            this.datagridDonor.Location = new System.Drawing.Point(0, 80);
+            this.datagridDonor.Location = new System.Drawing.Point(12, 62);
             this.datagridDonor.Name = "datagridDonor";
+            this.datagridDonor.ReadOnly = true;
             this.datagridDonor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.datagridDonor.ShowEditingIcon = false;
-            this.datagridDonor.Size = new System.Drawing.Size(763, 325);
-            this.datagridDonor.TabIndex = 3;
+            this.datagridDonor.Size = new System.Drawing.Size(702, 351);
+            this.datagridDonor.TabIndex = 12;
             // 
-            // btnRefresh
+            // donorName
             // 
-            this.btnRefresh.ActiveBorderThickness = 1;
-            this.btnRefresh.ActiveCornerRadius = 20;
-            this.btnRefresh.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
-            this.btnRefresh.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnRefresh.ActiveLineColor = System.Drawing.Color.Red;
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
-            this.btnRefresh.ButtonText = "Refresh";
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.IdleBorderThickness = 1;
-            this.btnRefresh.IdleCornerRadius = 20;
-            this.btnRefresh.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnRefresh.IdleForecolor = System.Drawing.Color.White;
-            this.btnRefresh.IdleLineColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(596, 424);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(122, 42);
-            this.btnRefresh.TabIndex = 8;
-            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.donorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donorName.HeaderText = "Name";
+            this.donorName.Name = "donorName";
+            this.donorName.ReadOnly = true;
             // 
-            // txbxSearch
+            // donorAge
             // 
-            this.txbxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.txbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbxSearch.ForeColor = System.Drawing.Color.White;
-            this.txbxSearch.Location = new System.Drawing.Point(376, 29);
-            this.txbxSearch.Name = "txbxSearch";
-            this.txbxSearch.Size = new System.Drawing.Size(238, 26);
-            this.txbxSearch.TabIndex = 9;
-            this.txbxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbxSearch_KeyPress);
+            this.donorAge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donorAge.HeaderText = "Age";
+            this.donorAge.Name = "donorAge";
+            this.donorAge.ReadOnly = true;
             // 
-            // label7
+            // donorGender
             // 
-            this.label7.AutoSize = true;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
-            this.label7.Location = new System.Drawing.Point(288, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Search";
+            this.donorGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donorGender.HeaderText = "Gender";
+            this.donorGender.Name = "donorGender";
+            this.donorGender.ReadOnly = true;
+            // 
+            // donorPhone
+            // 
+            this.donorPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donorPhone.HeaderText = "Phone";
+            this.donorPhone.Name = "donorPhone";
+            this.donorPhone.ReadOnly = true;
+            // 
+            // donorAddress
+            // 
+            this.donorAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donorAddress.HeaderText = "Address";
+            this.donorAddress.Name = "donorAddress";
+            this.donorAddress.ReadOnly = true;
             // 
             // ViewDonorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(742, 464);
+            this.ClientSize = new System.Drawing.Size(726, 425);
             this.ControlBox = false;
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txbxSearch);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.datagridDonor);
+            this.Controls.Add(this.txbxSearch);
+            this.Controls.Add(this.lblSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewDonorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "View Donor - Blood Donation Society Digital System";
-            this.Load += new System.EventHandler(this.ViewDonor_Load);
+            this.Text = "ViewDonorForm";
+            this.Load += new System.EventHandler(this.ViewDonorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridDonor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,9 +169,14 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCustomDataGrid datagridDonor;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnRefresh;
+
         private System.Windows.Forms.TextBox txbxSearch;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSearch;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid datagridDonor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorGender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorAddress;
     }
 }

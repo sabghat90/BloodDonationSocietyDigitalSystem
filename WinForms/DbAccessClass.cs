@@ -4,20 +4,20 @@ using System.Data.SqlClient;
 
 namespace BloodDonationSocietyDigitalSystem.WinForms
 {
-    class DbAccessClass
+    internal class DbAccessClass
     {
-        private static SqlConnection connection = new SqlConnection();
-        private static SqlCommand command = new SqlCommand();
+        private static readonly SqlConnection connection = new SqlConnection();
+        private static readonly SqlCommand command = new SqlCommand();
         private static SqlDataReader DbReader;
         private static SqlDataAdapter adapter = new SqlDataAdapter();
-        public SqlTransaction DbTran;
 
-        private static string strConnString =
+        private static readonly string strConnString =
             @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sabgh\source\repos\BloodDonationSocietyDigitalSystem\BDSDS_db.mdf;Integrated Security=True;Connect Timeout=30";
 
+        public SqlTransaction DbTran;
 
 
-        public void createConn()
+        private void CreateConn()
         {
             try
             {
@@ -34,29 +34,26 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         }
 
 
-        public void closeConn()
+        public void CloseConn()
         {
             connection.Close();
         }
 
 
-        public int executeDataAdapter(DataTable tblName, string strSelectSql)
+        public int ExecuteDataAdapter(DataTable tblName, string strSelectSql)
         {
             try
             {
-                if (connection.State == 0)
-                {
-                    createConn();
-                }
+                if (connection.State == 0) CreateConn();
 
                 adapter.SelectCommand.CommandText = strSelectSql;
                 adapter.SelectCommand.CommandType = CommandType.Text;
-                SqlCommandBuilder DbCommandBuilder = new SqlCommandBuilder(adapter);
+                var dbCommandBuilder = new SqlCommandBuilder(adapter);
 
 
-                string insert = DbCommandBuilder.GetInsertCommand().CommandText.ToString();
-                string update = DbCommandBuilder.GetUpdateCommand().CommandText.ToString();
-                string delete = DbCommandBuilder.GetDeleteCommand().CommandText.ToString();
+                var insert = dbCommandBuilder.GetInsertCommand().CommandText;
+                var update = dbCommandBuilder.GetUpdateCommand().CommandText;
+                var delete = dbCommandBuilder.GetDeleteCommand().CommandText;
 
 
                 return adapter.Update(tblName);
@@ -68,14 +65,11 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         }
 
 
-        public DataTable readDatathroughAdapter(string query, DataTable tblName)
+        public DataTable ReadDataThroughAdapter(string query, DataTable tblName)
         {
             try
             {
-                if (connection.State == ConnectionState.Closed)
-                {
-                    createConn();
-                }
+                if (connection.State == ConnectionState.Closed) CreateConn();
 
                 command.Connection = connection;
                 command.CommandText = query;
@@ -92,23 +86,19 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         }
 
 
-        public SqlDataReader readDatathroughReader(string query)
+        public SqlDataReader ReadDataThroughReader(string query)
         {
             //DataReader used to sequentially read data from a data source
-            SqlDataReader reader;
 
             try
             {
-                if (connection.State == ConnectionState.Closed)
-                {
-                    createConn();
-                }
+                if (connection.State == ConnectionState.Closed) CreateConn();
 
                 command.Connection = connection;
                 command.CommandText = query;
                 command.CommandType = CommandType.Text;
 
-                reader = command.ExecuteReader();
+                var reader = command.ExecuteReader();
                 return reader;
             }
             catch (Exception ex)
@@ -118,14 +108,11 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         }
 
 
-        public int executeQuery(SqlCommand dbCommand)
+        public int ExecuteQuery(SqlCommand dbCommand)
         {
             try
             {
-                if (connection.State == 0)
-                {
-                    createConn();
-                }
+                if (connection.State == 0) CreateConn();
 
                 dbCommand.Connection = connection;
                 dbCommand.CommandType = CommandType.Text;
@@ -133,6 +120,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
                 return dbCommand.ExecuteNonQuery();
             }
+
             catch (Exception ex)
             {
                 throw ex;

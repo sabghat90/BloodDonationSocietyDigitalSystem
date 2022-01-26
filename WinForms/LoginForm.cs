@@ -8,7 +8,7 @@ namespace BloodDonationSocietyDigitalSystem
 {
     public partial class LoginForm : Form
     {
-        public static string id, name, email, password;
+        public static string name, email, password;
 
         private readonly DataTable dataTable = new DataTable();
 
@@ -21,13 +21,12 @@ namespace BloodDonationSocietyDigitalSystem
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            SignUpForm singSignUpForm = new SignUpForm();
-            this.Hide();
+            var singSignUpForm = new SignUpForm();
+            Hide();
             singSignUpForm.Show();
         }
 
@@ -38,13 +37,12 @@ namespace BloodDonationSocietyDigitalSystem
 
             var query = "Select * From userTb Where email = '" + email + "'and password = '" + password + "'";
 
-            dbAccess.readDatathroughAdapter(query, dataTable);
+            dbAccess.ReadDataThroughAdapter(query, dataTable);
 
             try
             {
                 // this is the global variables which we use further for the login user...
 
-                id = dataTable.Rows[0]["id"].ToString();
                 name = dataTable.Rows[0]["name"].ToString();
                 email = dataTable.Rows[0]["email"].ToString();
                 password = dataTable.Rows[0]["password"].ToString();
@@ -59,7 +57,8 @@ namespace BloodDonationSocietyDigitalSystem
 
                 else
                 {
-                    MessageBox.Show(@"Email or Password is incorrect...", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(@"Email or Password is incorrect...", @"Warning", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
@@ -84,7 +83,7 @@ namespace BloodDonationSocietyDigitalSystem
 
                 // this is the global variables which we use further for the login user...
 
-                id = dataTable.Rows[0]["id"].ToString();
+
                 name = dataTable.Rows[0]["name"].ToString();
                 email = dataTable.Rows[0]["email"].ToString();
                 password = dataTable.Rows[0]["password"].ToString();
@@ -99,12 +98,13 @@ namespace BloodDonationSocietyDigitalSystem
 
                 else
                 {
-                    MessageBox.Show(@"Email or Password is incorrect...", @"Warning", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show(@"Email or Password is incorrect...", @"Warning", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show(@"Fields are Empty", @"Warning",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(@"Fields are Empty", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

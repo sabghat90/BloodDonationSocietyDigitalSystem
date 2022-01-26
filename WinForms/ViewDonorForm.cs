@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -7,66 +6,63 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 {
     public partial class ViewDonorForm : Form
     {
-        DataTable dt = new DataTable();
-        private DbAccessClass dbAccess = new DbAccessClass();
+
+        private readonly DbAccessClass dbAccess = new DbAccessClass();
+        private SqlDataReader reader;
 
         public ViewDonorForm()
         {
             InitializeComponent();
         }
 
-        private void FillData(string query)
+        private void ViewDonorForm_Load(object sender, System.EventArgs e)
         {
-            const string connectionString =
-                @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sabgh\source\repos\BloodDonationSocietyDigitalSystem\BDSDS_db.mdf;Integrated Security=True;Connect Timeout=30";
-            var conn = new SqlConnection(connectionString);
+            const string query = "SELECT * FROM DonorTb";
+
+            reader = dbAccess.ReadDataThroughReader(query);
 
             try
             {
-                conn.Open();
-                var cmd = new SqlCommand(query, conn);
-                var adapter = new SqlDataAdapter(cmd);
-
-                var ds = new DataSet();
-                adapter.Fill(ds, "DonorTb");
-
-                datagridDonor.DataSource = ds.Tables["DonorTb"];
+                while (reader.Read())
+                    datagridDonor.Rows.Add(reader["dName"], reader["dAge"], reader["dGender"], reader["dPhone"],
+                        reader["dAddress"]);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(@"Could not establish connection with database server. Please try again. Error: " +
-                                ex.Message);
+                MessageBox.Show("Something went Wrong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                if (conn.State == ConnectionState.Open)
-                    conn.Close();
+                dbAccess.CloseConn();
             }
         }
 
         private void txbxSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13)
+            try
             {
-                var query =
-                    "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb where dBloodGroup = '" +
-                    txbxSearch.Text + "' or dName = '" + txbxSearch.Text + "'";
+                if (e.KeyChar == 13)
+                {
+                    datagridDonor.Rows.Clear();
+                    var query =
+                        "SELECT * FROM DonorTb where dBloodGroup = '" +
+                        txbxSearch.Text + "' or dName = '" + txbxSearch.Text + "'";
 
-                dt = dbAccess.readDatathroughAdapter(query, dt);
-                datagridDonor.DataSource = dt;
+                    reader = dbAccess.ReadDataThroughReader(query);
+
+                    while (reader.Read())
+                        datagridDonor.Rows.Add(reader["dName"], reader["dAge"], reader["dGender"], reader["dPhone"],
+                            reader["dAddress"]);
+                }
             }
-        }
-
-        
-
-        private void ViewDonor_Load(object sender, EventArgs e)
-        {
-            const string query =
-                "SELECT dName as Name, dGender as Gender, dAge as Age,dBloodGroup as [Blood Group], dPhone as Phone, dCity as City FROM DonorTb";
-            
-            
-            dt = dbAccess.readDatathroughAdapter(query, dt);
-            datagridDonor.DataSource = dt;
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbAccess.CloseConn();
+            }
         }
     }
 }

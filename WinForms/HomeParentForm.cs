@@ -15,16 +15,15 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void LoadFormsToPanel(object Form)
         {
-            
-            if (this.ContainerPanel.Controls.Count > 0)
-                this.ContainerPanel.Controls.RemoveAt(0);
+            if (ContainerPanel.Controls.Count > 0)
+                ContainerPanel.Controls.RemoveAt(0);
             ContainerPanel.Controls.Clear();
 
-            Form f = Form as Form;
+            var f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
-            this.ContainerPanel.Controls.Add(f);
-            this.ContainerPanel.Tag = f;
+            ContainerPanel.Controls.Add(f);
+            ContainerPanel.Tag = f;
             f.Show();
         }
 
@@ -65,8 +64,8 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            this.Hide();
+            var loginForm = new LoginForm();
+            Hide();
             loginForm.Show();
             BtnActivationLblPosition(btnLogout);
         }

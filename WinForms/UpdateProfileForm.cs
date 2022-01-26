@@ -1,4 +1,12 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BloodDonationSocietyDigitalSystem.WinForms
 {
@@ -7,11 +15,6 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         public UpdateProfileForm()
         {
             InitializeComponent();
-        }
-
-        private void UpdateProfile_Load(object sender, System.EventArgs e)
-        {
-
         }
     }
 }

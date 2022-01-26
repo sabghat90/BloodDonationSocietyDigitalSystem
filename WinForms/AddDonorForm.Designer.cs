@@ -47,6 +47,12 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btnAddDonor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblBloodGroup = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbxDName
@@ -58,6 +64,7 @@
             this.txbxDName.Name = "txbxDName";
             this.txbxDName.Size = new System.Drawing.Size(242, 26);
             this.txbxDName.TabIndex = 0;
+            this.txbxDName.TextChanged += new System.EventHandler(this.txbxDName_TextChanged);
             // 
             // txbxDAge
             // 
@@ -68,6 +75,7 @@
             this.txbxDAge.Name = "txbxDAge";
             this.txbxDAge.Size = new System.Drawing.Size(162, 26);
             this.txbxDAge.TabIndex = 1;
+            this.txbxDAge.TextChanged += new System.EventHandler(this.txbxDAge_TextChanged);
             // 
             // label8
             // 
@@ -138,7 +146,6 @@
             this.cbDGender.Name = "cbDGender";
             this.cbDGender.Size = new System.Drawing.Size(162, 26);
             this.cbDGender.TabIndex = 2;
-            this.cbDGender.Validating += new System.ComponentModel.CancelEventHandler(this.cbDGender_Validating);
             // 
             // label9
             // 
@@ -160,6 +167,7 @@
             this.txbxDCity.Name = "txbxDCity";
             this.txbxDCity.Size = new System.Drawing.Size(242, 26);
             this.txbxDCity.TabIndex = 3;
+            this.txbxDCity.TextChanged += new System.EventHandler(this.txbxDCity_TextChanged);
             // 
             // txbxDPhone
             // 
@@ -170,6 +178,7 @@
             this.txbxDPhone.Name = "txbxDPhone";
             this.txbxDPhone.Size = new System.Drawing.Size(242, 26);
             this.txbxDPhone.TabIndex = 4;
+            this.txbxDPhone.TextChanged += new System.EventHandler(this.txbxDPhone_TextChanged);
             // 
             // label13
             // 
@@ -212,7 +221,7 @@
             this.cbDBloodGroup.Name = "cbDBloodGroup";
             this.cbDBloodGroup.Size = new System.Drawing.Size(132, 26);
             this.cbDBloodGroup.TabIndex = 5;
-            this.cbDBloodGroup.Validating += new System.ComponentModel.CancelEventHandler(this.cbDBloodGroup_Validating);
+            this.cbDBloodGroup.TextChanged += new System.EventHandler(this.cbDBloodGroup_TextChanged);
             // 
             // rtxbxDAddress
             // 
@@ -225,6 +234,7 @@
             this.rtxbxDAddress.Size = new System.Drawing.Size(239, 93);
             this.rtxbxDAddress.TabIndex = 6;
             this.rtxbxDAddress.Text = "";
+            this.rtxbxDAddress.TextChanged += new System.EventHandler(this.rtxbxDAddress_TextChanged);
             // 
             // label15
             // 
@@ -273,6 +283,66 @@
             this.lblBloodGroup.Size = new System.Drawing.Size(0, 16);
             this.lblBloodGroup.TabIndex = 79;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(159, 139);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 16);
+            this.lblName.TabIndex = 80;
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.ForeColor = System.Drawing.Color.White;
+            this.lblAge.Location = new System.Drawing.Point(522, 139);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(0, 16);
+            this.lblAge.TabIndex = 81;
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.Color.White;
+            this.lblCity.Location = new System.Drawing.Point(160, 204);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(0, 16);
+            this.lblCity.TabIndex = 82;
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.White;
+            this.lblGender.Location = new System.Drawing.Point(522, 204);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(0, 16);
+            this.lblGender.TabIndex = 83;
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.ForeColor = System.Drawing.Color.White;
+            this.lblPhone.Location = new System.Drawing.Point(160, 268);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(0, 16);
+            this.lblPhone.TabIndex = 84;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.White;
+            this.lblAddress.Location = new System.Drawing.Point(159, 407);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(0, 16);
+            this.lblAddress.TabIndex = 85;
+            // 
             // AddDonorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +350,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(742, 464);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.lblPhone);
+            this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.lblCity);
+            this.Controls.Add(this.lblAge);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblBloodGroup);
             this.Controls.Add(this.btnAddDonor);
             this.Controls.Add(this.label15);
@@ -303,7 +379,6 @@
             this.Name = "AddDonorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Donor - Blood Donation Society Digital System";
-            this.Load += new System.EventHandler(this.AddDonor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +403,11 @@
         private System.Windows.Forms.Label label15;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddDonor;
         private System.Windows.Forms.Label lblBloodGroup;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblAddress;
     }
 }
