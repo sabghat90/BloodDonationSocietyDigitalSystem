@@ -32,6 +32,7 @@
             this.MainPanle = new System.Windows.Forms.Panel();
             this.ContainerPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAccountSetting = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBtnPoint = new System.Windows.Forms.Panel();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.btnAccountSetting);
             this.panel3.Controls.Add(this.lblBtnPoint);
             this.panel3.Controls.Add(this.btnDashboard);
             this.panel3.Controls.Add(this.btnAddDonor);
@@ -80,10 +82,24 @@
             this.panel3.Size = new System.Drawing.Size(205, 507);
             this.panel3.TabIndex = 6;
             // 
+            // btnAccountSetting
+            // 
+            this.btnAccountSetting.FlatAppearance.BorderSize = 0;
+            this.btnAccountSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccountSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccountSetting.ForeColor = System.Drawing.Color.White;
+            this.btnAccountSetting.Location = new System.Drawing.Point(12, 356);
+            this.btnAccountSetting.Name = "btnAccountSetting";
+            this.btnAccountSetting.Size = new System.Drawing.Size(193, 34);
+            this.btnAccountSetting.TabIndex = 9;
+            this.btnAccountSetting.Text = "Account Setting";
+            this.btnAccountSetting.UseVisualStyleBackColor = true;
+            this.btnAccountSetting.Click += new System.EventHandler(this.btnAccountSetting_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(181, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 34);
             this.pictureBox1.TabIndex = 8;
@@ -104,7 +120,7 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(12, 117);
+            this.btnDashboard.Location = new System.Drawing.Point(11, 116);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(193, 34);
             this.btnDashboard.TabIndex = 6;
@@ -118,7 +134,7 @@
             this.btnAddDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDonor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDonor.ForeColor = System.Drawing.Color.White;
-            this.btnAddDonor.Location = new System.Drawing.Point(12, 157);
+            this.btnAddDonor.Location = new System.Drawing.Point(11, 156);
             this.btnAddDonor.Name = "btnAddDonor";
             this.btnAddDonor.Size = new System.Drawing.Size(193, 34);
             this.btnAddDonor.TabIndex = 5;
@@ -132,7 +148,7 @@
             this.btnViewDonor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewDonor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDonor.ForeColor = System.Drawing.Color.White;
-            this.btnViewDonor.Location = new System.Drawing.Point(12, 197);
+            this.btnViewDonor.Location = new System.Drawing.Point(11, 196);
             this.btnViewDonor.Name = "btnViewDonor";
             this.btnViewDonor.Size = new System.Drawing.Size(193, 34);
             this.btnViewDonor.TabIndex = 4;
@@ -146,7 +162,7 @@
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatient.Location = new System.Drawing.Point(12, 237);
+            this.btnAddPatient.Location = new System.Drawing.Point(11, 236);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Size = new System.Drawing.Size(193, 34);
             this.btnAddPatient.TabIndex = 3;
@@ -160,7 +176,7 @@
             this.btnViewPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewPatient.ForeColor = System.Drawing.Color.White;
-            this.btnViewPatient.Location = new System.Drawing.Point(12, 277);
+            this.btnViewPatient.Location = new System.Drawing.Point(11, 276);
             this.btnViewPatient.Name = "btnViewPatient";
             this.btnViewPatient.Size = new System.Drawing.Size(193, 34);
             this.btnViewPatient.TabIndex = 2;
@@ -174,7 +190,7 @@
             this.btnUpdateProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProfile.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateProfile.Location = new System.Drawing.Point(12, 317);
+            this.btnUpdateProfile.Location = new System.Drawing.Point(11, 316);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
             this.btnUpdateProfile.Size = new System.Drawing.Size(193, 34);
             this.btnUpdateProfile.TabIndex = 1;
@@ -188,7 +204,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(12, 357);
+            this.btnLogout.Location = new System.Drawing.Point(11, 396);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(193, 34);
             this.btnLogout.TabIndex = 0;
@@ -229,5 +245,6 @@
         private System.Windows.Forms.Panel lblBtnPoint;
         private System.Windows.Forms.Panel ContainerPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAccountSetting;
     }
 }

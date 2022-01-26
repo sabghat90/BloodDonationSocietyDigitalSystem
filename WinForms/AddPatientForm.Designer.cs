@@ -79,6 +79,7 @@
             this.btnAddPatient.Size = new System.Drawing.Size(160, 42);
             this.btnAddPatient.TabIndex = 68;
             this.btnAddPatient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // label15
             // 

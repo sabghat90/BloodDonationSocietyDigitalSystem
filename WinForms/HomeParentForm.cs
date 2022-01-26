@@ -80,5 +80,11 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
         {
             Close();
         }
+
+        private void btnAccountSetting_Click(object sender, EventArgs e)
+        {
+            BtnActivationLblPosition(btnAccountSetting);
+            LoadFormsToPanel(new AccountSettingForm());
+        }
     }
 }

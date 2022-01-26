@@ -51,7 +51,6 @@
             this.txbxUpdateAge = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -149,6 +148,7 @@
             this.btnUpdateProfile.Size = new System.Drawing.Size(160, 42);
             this.btnUpdateProfile.TabIndex = 92;
             this.btnUpdateProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
             // 
             // label15
             // 
@@ -321,27 +321,16 @@
             this.label10.TabIndex = 95;
             this.label10.Text = "Phone";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label11.Location = new System.Drawing.Point(21, 72);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 16);
-            this.label11.TabIndex = 94;
-            this.label11.Text = "Patient Information";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
-            this.label12.Location = new System.Drawing.Point(21, 19);
+            this.label12.Location = new System.Drawing.Point(19, 54);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 25);
+            this.label12.Size = new System.Drawing.Size(338, 25);
             this.label12.TabIndex = 93;
-            this.label12.Text = "Add Patient";
+            this.label12.Text = "Update Your Donor Information";
             // 
             // UpdateProfileForm
             // 
@@ -372,13 +361,13 @@
             this.Controls.Add(this.txbxUpdateAge);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateProfileForm";
+            this.Load += new System.EventHandler(this.UpdateProfileForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,7 +397,6 @@
         private System.Windows.Forms.TextBox txbxUpdateAge;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
     }
 }

@@ -36,6 +36,7 @@
             this.txbxPassword = new System.Windows.Forms.TextBox();
             this.btnSignUp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +96,7 @@
             this.txbxEmail.Name = "txbxEmail";
             this.txbxEmail.Size = new System.Drawing.Size(242, 26);
             this.txbxEmail.TabIndex = 9;
+            this.txbxEmail.TextChanged += new System.EventHandler(this.txbxEmail_TextChanged);
             // 
             // txbxPassword
             // 
@@ -168,12 +170,23 @@
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(259, 164);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(0, 16);
+            this.lblEmail.TabIndex = 26;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(600, 450);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label1);
@@ -202,5 +215,6 @@
         private System.Windows.Forms.TextBox txbxEmail;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSignUp;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private System.Windows.Forms.Label lblEmail;
     }
 }

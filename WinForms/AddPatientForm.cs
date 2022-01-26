@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,6 +7,8 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 {
     public partial class AddPatientForm : Form
     {
+        private DbAccessClass dbAccess = new DbAccessClass();
+
         public AddPatientForm()
         {
             InitializeComponent();
@@ -54,6 +57,37 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 lblBloodGroup.Text = "Invalid";
             else
                 lblBloodGroup.Text = "";
+        }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            var query =
+                "INSERT INTO PatientTb (dName, dAge, dGender, dCity, dPhone, dBloodGroup, dAddress,email) VALUES ('" +
+                txbxPName.Text + "','" + txbxPAge.Text + "','" + cbPGender.Text + "','" + txbxPCity.Text +
+                "','" + txbxPPhone.Text + "','" + cbPBloodGroup.Text + "','" + rtxbxPAddress.Text + "','" +
+                LoginForm.userEmail + "')";
+            var cmd = new SqlCommand(query);
+
+            var rowsEffected = dbAccess.ExecuteQuery(cmd);
+
+            try
+            {
+                if (rowsEffected == 1)
+                    MessageBox.Show("Donor Added Successfully", "Confirmation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                else
+                {
+                    MessageBox.Show("You are Already Registered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You are Already Registered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbAccess.CloseConn();
+            }
         }
     }
 }

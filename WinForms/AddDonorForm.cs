@@ -20,7 +20,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 "INSERT INTO DonorTb (dName, dAge, dGender, dCity, dPhone, dBloodGroup, dAddress,email) VALUES ('" +
                 txbxDName.Text + "','" + txbxDAge.Text + "','" + cbDGender.Text + "','" + txbxDCity.Text +
                 "','" + txbxDPhone.Text + "','" + cbDBloodGroup.Text + "','" + rtxbxDAddress.Text + "','" +
-                LoginForm.email + "')";
+                LoginForm.userEmail + "')";
             var cmd = new SqlCommand(query);
 
             var rowsEffected = dbAccess.ExecuteQuery(cmd);
@@ -30,6 +30,10 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 if (rowsEffected == 1)
                     MessageBox.Show("Donor Added Successfully", "Confirmation", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
+                else
+                {
+                    MessageBox.Show("You are Already Registered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

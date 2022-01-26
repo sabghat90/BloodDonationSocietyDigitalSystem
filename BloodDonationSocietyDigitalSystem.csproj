@@ -85,6 +85,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\AccountSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\AccountSettingForm.Designer.cs">
+      <DependentUpon>AccountSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\AddPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="WinForms\ViewDonorForm.Designer.cs">
       <DependentUpon>ViewDonorForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WinForms\AccountSettingForm.resx">
+      <DependentUpon>AccountSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForms\AddPatientForm.resx">
       <DependentUpon>AddPatientForm.cs</DependentUpon>
       <SubType>Designer</SubType>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -6,6 +7,9 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 {
     public partial class UpdateProfileForm : Form
     {
+        private DbAccessClass dbAccess = new DbAccessClass();
+        SqlDataReader reader = null;
+
         public UpdateProfileForm()
         {
             InitializeComponent();
@@ -62,6 +66,67 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 lblAddress.Text = @"Invalid Address...";
             else
                 lblAddress.Text = "";
+        }
+
+        private void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE DonorTb SET dName = '" + txbxUpdateName.Text + "', dAge = '" + txbxUpdateAge.Text +
+                           "', dGender = '" + cbUpdateGender.Text + "', dPhone = '" + txbxUpdatePhone.Text + "', dBloodGroup = '" + cbUpdateBloodGroup.Text + "', dAddress = '" + rtxbxUpdateAddress.Text + "' WHERE email = '" + LoginForm.userEmail + "'";
+            int rowsEffected = dbAccess.ExecuteQuery(new SqlCommand(query));
+
+            try
+            {
+                if (rowsEffected == 1)
+                {
+                    MessageBox.Show("Information Updated Successfully", "Confirmation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Sorry, Something went wrong, please try again.", "Warning", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Connection not established", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbAccess.CloseConn();
+            }
+        }
+
+        private void UpdateProfileForm_Load(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM DonorTb WHERE email = '" + LoginForm.userEmail + "'";
+
+            reader = dbAccess.ReadDataThroughReader(query);
+
+            try
+            {
+                if (reader.Read())
+                {
+                    txbxUpdateName.Text = reader["dName"].ToString();
+                    txbxUpdateAge.Text = reader["dAge"].ToString();
+                    cbUpdateGender.Text = reader["dGender"].ToString();
+                    txbxUpdateCity.Text = reader["dCity"].ToString();
+                    txbxUpdatePhone.Text = reader["dPhone"].ToString();
+                    cbUpdateBloodGroup.Text = reader["dBloodGroup"].ToString();
+                    rtxbxUpdateAddress.Text = reader["dAddress"].ToString();
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Something went wrong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbAccess.CloseConn();
+            }
         }
     }
 }
