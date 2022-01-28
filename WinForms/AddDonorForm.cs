@@ -37,7 +37,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             }
             catch (Exception)
             {
-                MessageBox.Show("You are Already Registered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something went wrong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

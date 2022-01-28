@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.AccountSettingForm" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAAEBABAACAAAACABAACAAAogAAAABAAAA=</HashCode>
+      <FileName>WinForms\AccountSettingForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.AddDonorForm" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8wAAAIBBACAAEJAAAAKAxAAiABUAIAACAAAhAAgAIAA=</HashCode>
+      <FileName>WinForms\AddDonorForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.AddPatientForm" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8xBAAIABACAAAJIAAUKAQAAiABUAIAAiBAAAAAgBIAE=</HashCode>
+      <FileName>WinForms\AddPatientForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.DashboardForm" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAAAACAAAACAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>WinForms\DashboardForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.DbAccessClass" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAABAAAABQAIADAEAAAAQAAAAAIAAAAIAAAAA=</HashCode>
+      <FileName>WinForms\DbAccessClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.HomeParentForm" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAIAIBQCAAAIIAoQCAAAACIABAAAAAAARgBShAAAM=</HashCode>
+      <FileName>WinForms\HomeParentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.LoginForm" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAABiAAABAAAACAIAACCBAACAAiAAAAAAFAgAg=</HashCode>
+      <FileName>WinForms\LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.SignUpForm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAABAAjAAABBIAACAIAACCBAACAAgCgAAAABCgAA=</HashCode>
+      <FileName>WinForms\SignUpForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.UpdateProfileForm" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>84AQBIIAACGAYBAAAAKAgAACEBVAYAAAAggAAAAQIAA=</HashCode>
+      <FileName>WinForms\UpdateProfileForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.UserInputValidating">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>WinForms\UserInputValidating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.ViewDonorForm" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAAAAAQCCAAAABAQgCAAQACQBBAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>WinForms\ViewDonorForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.WinForms.ViewPatientForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAQCCAAAAAAAgCIAAACABAUAAAAAAAAAAQQQEA=</HashCode>
+      <FileName>WinForms\ViewPatientForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BloodDonationSocietyDigitalSystem.Program" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

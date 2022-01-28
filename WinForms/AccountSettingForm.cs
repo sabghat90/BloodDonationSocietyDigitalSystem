@@ -46,5 +46,15 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             }
             
         }
+
+        private void txbxNewPassword_TextChanged(object sender, EventArgs e)
+        {
+            UserInputValidating.ValidateUser(@"^[A-Za-z0-9_\-\.]{4,}$",
+                txbxNewPassword, lblPassword, "Password");
+            if (txbxNewPassword.Text != txbxCNewPassword.Text)
+            {
+                lblCPassword.Text = "Password Not Matching";
+            }
+        }
     }
 }

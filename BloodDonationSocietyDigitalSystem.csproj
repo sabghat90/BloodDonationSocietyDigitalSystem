@@ -186,6 +186,7 @@
     <EmbeddedResource Include="WinForms\ViewDonorForm.resx">
       <DependentUpon>ViewDonorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BDSDSClassDiagram.cd" />
     <None Include="BDSDS_dbDataSet.xsc">
       <DependentUpon>BDSDS_dbDataSet.xsd</DependentUpon>
     </None>

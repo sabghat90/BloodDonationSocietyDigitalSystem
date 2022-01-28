@@ -37,6 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txbxCNewPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblCPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbxNewPassword
@@ -52,6 +54,7 @@
             this.txbxNewPassword.Size = new System.Drawing.Size(242, 26);
             this.txbxNewPassword.TabIndex = 14;
             this.txbxNewPassword.UseSystemPasswordChar = true;
+            this.txbxNewPassword.TextChanged += new System.EventHandler(this.txbxNewPassword_TextChanged);
             // 
             // txbxCurrentPassword
             // 
@@ -90,7 +93,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(78, 247);
+            this.label2.Location = new System.Drawing.Point(78, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 25);
             this.label2.TabIndex = 11;
@@ -120,7 +123,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(78, 87);
+            this.label4.Location = new System.Drawing.Point(78, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(202, 25);
             this.label4.TabIndex = 16;
@@ -169,12 +172,34 @@
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(315, 197);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(0, 16);
+            this.lblPassword.TabIndex = 27;
+            // 
+            // lblCPassword
+            // 
+            this.lblCPassword.AutoSize = true;
+            this.lblCPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPassword.ForeColor = System.Drawing.Color.White;
+            this.lblCPassword.Location = new System.Drawing.Point(315, 277);
+            this.lblCPassword.Name = "lblCPassword";
+            this.lblCPassword.Size = new System.Drawing.Size(0, 16);
+            this.lblCPassword.TabIndex = 28;
+            // 
             // AccountSettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(726, 425);
+            this.Controls.Add(this.lblCPassword);
+            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbxCNewPassword);
             this.Controls.Add(this.label4);
@@ -202,5 +227,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbxCNewPassword;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblCPassword;
     }
 }

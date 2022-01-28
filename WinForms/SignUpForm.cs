@@ -87,7 +87,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
 
         private void txbxPassword_TextChanged(object sender, EventArgs e)
         {
-            UserInputValidating.ValidateUser(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$",
+            UserInputValidating.ValidateUser(@"^[A-Za-z0-9_\-\.]{4,}$",
                 txbxPassword, lblPassword, "Password");
         }
 
