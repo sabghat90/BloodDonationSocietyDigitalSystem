@@ -22,7 +22,7 @@ namespace BloodDonationSocietyDigitalSystem
         {
         }
 
-        private void txbxEmail_TextChanged(object sender, EventArgs e)
+        private void TxbxEmail_TextChanged(object sender, EventArgs e)
         {
             UserInputValidating.ValidateUser(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", txbxEmail, lblEmail, "Email");
         }
@@ -34,7 +34,7 @@ namespace BloodDonationSocietyDigitalSystem
             singSignUpForm.Show();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             var email = txbxEmail.Text;
             var password = txbxPassword.Text;

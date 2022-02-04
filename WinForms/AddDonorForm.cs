@@ -14,7 +14,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             InitializeComponent();
         }
 
-        private void btnAddDonor_Click(object sender, EventArgs e)
+        private void BtnAddDonor_Click(object sender, EventArgs e)
         {
             var query =
                 "INSERT INTO DonorTb (dName, dAge, dGender, dCity, dPhone, dBloodGroup, dAddress,email) VALUES ('" +
@@ -45,27 +45,27 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             }
         }
 
-        private void txbxDName_TextChanged(object sender, EventArgs e)
+        private void TxbxDName_TextChanged(object sender, EventArgs e)
         {
             UserInputValidating.ValidateUser("^[A-Za-z - ]+$", txbxDName, lblName, "Name");
         }
 
-        private void txbxDAge_TextChanged(object sender, EventArgs e)
+        private void TxbxDAge_TextChanged(object sender, EventArgs e)
         {
             UserInputValidating.ValidateUser(@"^[1-9]+$", txbxDAge, lblAge, "Age");
         }
 
-        private void txbxDCity_TextChanged(object sender, EventArgs e)
+        private void TxbxDCity_TextChanged(object sender, EventArgs e)
         {
             UserInputValidating.ValidateUser("[A-Za-z - ]+$", txbxDCity, lblCity, "City");
         }
 
-        private void txbxDPhone_TextChanged(object sender, EventArgs e)
+        private void TxbxDPhone_TextChanged(object sender, EventArgs e)
         {
             UserInputValidating.ValidateUser(@"^[0][1-9]\d{9}$|^[1-9]\d{9}$", txbxDPhone, lblPhone, "Phone Number");
         }
 
-        private void cbDBloodGroup_TextChanged(object sender, EventArgs e)
+        private void CbDBloodGroup_TextChanged(object sender, EventArgs e)
         {
             if (!(cbDBloodGroup.Text.Equals("A+") || cbDBloodGroup.Text.Equals("A-") ||
                   cbDBloodGroup.Text.Trim().Equals("B+") || cbDBloodGroup.Text.Equals("B-") ||
@@ -76,7 +76,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 lblBloodGroup.Text = "";
         }
 
-        private void rtxbxDAddress_TextChanged(object sender, EventArgs e)
+        private void RtxbxDAddress_TextChanged(object sender, EventArgs e)
         {
             if (rtxbxDAddress.Text.Equals(""))
                 lblAddress.Text = @"Empty Filed";
@@ -86,7 +86,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
                 lblAddress.Text = "";
         }
 
-        private void cbDGender_TextChanged(object sender, EventArgs e)
+        private void CbDGender_TextChanged(object sender, EventArgs e)
         {
             if (cbDGender.Text.Equals(""))
                 lblGender.Text = "Empty Field";

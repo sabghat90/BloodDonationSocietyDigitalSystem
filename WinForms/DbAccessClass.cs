@@ -8,7 +8,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
     {
         private static readonly SqlConnection connection = new SqlConnection();
         private static readonly SqlCommand command = new SqlCommand();
-        private static SqlDataReader DbReader;
+        private static readonly SqlDataReader DbReader;
         private static SqlDataAdapter adapter = new SqlDataAdapter();
 
         private static readonly string strConnString =

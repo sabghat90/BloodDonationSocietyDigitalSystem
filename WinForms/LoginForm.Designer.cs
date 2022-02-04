@@ -96,7 +96,7 @@
             this.txbxEmail.Name = "txbxEmail";
             this.txbxEmail.Size = new System.Drawing.Size(242, 26);
             this.txbxEmail.TabIndex = 9;
-            this.txbxEmail.TextChanged += new System.EventHandler(this.txbxEmail_TextChanged);
+            this.txbxEmail.TextChanged += new System.EventHandler(this.TxbxEmail_TextChanged);
             // 
             // txbxPassword
             // 
@@ -168,7 +168,7 @@
             this.btnLogin.Size = new System.Drawing.Size(122, 42);
             this.btnLogin.TabIndex = 12;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // lblEmail
             // 

@@ -54,7 +54,7 @@
             this.txbxSearch.Name = "txbxSearch";
             this.txbxSearch.Size = new System.Drawing.Size(242, 26);
             this.txbxSearch.TabIndex = 11;
-            this.txbxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbxSearch_KeyPress);
+            this.txbxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbxSearch_KeyPress);
             // 
             // lblSearch
             // 

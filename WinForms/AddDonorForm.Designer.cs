@@ -64,7 +64,7 @@
             this.txbxDName.Name = "txbxDName";
             this.txbxDName.Size = new System.Drawing.Size(242, 26);
             this.txbxDName.TabIndex = 0;
-            this.txbxDName.TextChanged += new System.EventHandler(this.txbxDName_TextChanged);
+            this.txbxDName.TextChanged += new System.EventHandler(this.TxbxDName_TextChanged);
             // 
             // txbxDAge
             // 
@@ -75,7 +75,7 @@
             this.txbxDAge.Name = "txbxDAge";
             this.txbxDAge.Size = new System.Drawing.Size(162, 26);
             this.txbxDAge.TabIndex = 1;
-            this.txbxDAge.TextChanged += new System.EventHandler(this.txbxDAge_TextChanged);
+            this.txbxDAge.TextChanged += new System.EventHandler(this.TxbxDAge_TextChanged);
             // 
             // label8
             // 
@@ -146,7 +146,7 @@
             this.cbDGender.Name = "cbDGender";
             this.cbDGender.Size = new System.Drawing.Size(162, 26);
             this.cbDGender.TabIndex = 2;
-            this.cbDGender.TextChanged += new System.EventHandler(this.cbDGender_TextChanged);
+            this.cbDGender.TextChanged += new System.EventHandler(this.CbDGender_TextChanged);
             // 
             // label9
             // 
@@ -168,7 +168,7 @@
             this.txbxDCity.Name = "txbxDCity";
             this.txbxDCity.Size = new System.Drawing.Size(242, 26);
             this.txbxDCity.TabIndex = 3;
-            this.txbxDCity.TextChanged += new System.EventHandler(this.txbxDCity_TextChanged);
+            this.txbxDCity.TextChanged += new System.EventHandler(this.TxbxDCity_TextChanged);
             // 
             // txbxDPhone
             // 
@@ -179,7 +179,7 @@
             this.txbxDPhone.Name = "txbxDPhone";
             this.txbxDPhone.Size = new System.Drawing.Size(242, 26);
             this.txbxDPhone.TabIndex = 4;
-            this.txbxDPhone.TextChanged += new System.EventHandler(this.txbxDPhone_TextChanged);
+            this.txbxDPhone.TextChanged += new System.EventHandler(this.TxbxDPhone_TextChanged);
             // 
             // label13
             // 
@@ -222,7 +222,7 @@
             this.cbDBloodGroup.Name = "cbDBloodGroup";
             this.cbDBloodGroup.Size = new System.Drawing.Size(132, 26);
             this.cbDBloodGroup.TabIndex = 5;
-            this.cbDBloodGroup.TextChanged += new System.EventHandler(this.cbDBloodGroup_TextChanged);
+            this.cbDBloodGroup.TextChanged += new System.EventHandler(this.CbDBloodGroup_TextChanged);
             // 
             // rtxbxDAddress
             // 
@@ -235,7 +235,7 @@
             this.rtxbxDAddress.Size = new System.Drawing.Size(239, 93);
             this.rtxbxDAddress.TabIndex = 6;
             this.rtxbxDAddress.Text = "";
-            this.rtxbxDAddress.TextChanged += new System.EventHandler(this.rtxbxDAddress_TextChanged);
+            this.rtxbxDAddress.TextChanged += new System.EventHandler(this.RtxbxDAddress_TextChanged);
             // 
             // label15
             // 
@@ -272,7 +272,7 @@
             this.btnAddDonor.Size = new System.Drawing.Size(122, 42);
             this.btnAddDonor.TabIndex = 7;
             this.btnAddDonor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddDonor.Click += new System.EventHandler(this.btnAddDonor_Click);
+            this.btnAddDonor.Click += new System.EventHandler(this.BtnAddDonor_Click);
             // 
             // lblBloodGroup
             // 

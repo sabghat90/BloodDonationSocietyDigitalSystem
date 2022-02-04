@@ -36,7 +36,7 @@ namespace BloodDonationSocietyDigitalSystem.WinForms
             }
         }
 
-        private void txbxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxbxSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
