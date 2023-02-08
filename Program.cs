@@ -9,6 +9,7 @@ namespace BloodDonationSocietyDigitalSystem
         /// <summary>
         ///     The main entry point for the application.
         /// </summary>
+        /// something added
         [STAThread]
         private static void Main()
         {
